@@ -21,47 +21,79 @@ class Signin extends Component {
 	};
 	handleKeyPress = (event) => {
 		if (event.key === "Enter") {
-			console.log("enter press here! ");
+			this.submitHandler(event);
 		}
 	};
+	resetHandler = () => {
+		this.setState({ email: "", password: "" });
+	};
 	render = () => {
+		let errorMsg = "";
+		let sucMsg = "";
+		if (this.props.error) {
+			errorMsg = this.props.error.message;
+			console.log(errorMsg);
+		}
+		if (this.props.data) {
+			sucMsg =
+				"Sign up is successful. Sign in status will expire in " +
+				parseInt(this.props.data) / 3600 +
+				" minute.";
+			// this.props.onAuthInit();
+		}
 		return (
-			<form>
-				<FormAlignComponent>
-					<TextField
-						type="text"
-						name="email"
-						id="standard-basic"
-						label="Standard"
-						value={this.state.email}
-						onChange={this.onChangeHandler}
-					/>
-					<TextField
-						id="standard-basic"
-						label="Standard"
-						type="password"
-						name="password"
-						value={this.state.password}
-						onChange={this.onChangeHandler}
-						onKeyPress={this.handleKeyPress}
-					/>
-					<Button
-						variant="contained"
-						color="primary"
-						onClick={this.submitHandler}
-					>
-						Submit
-					</Button>
-				</FormAlignComponent>
-			</form>
+			<div>
+				<div style={{ height: "30px", color: "#D496A7" }}>
+					{errorMsg}
+					{sucMsg}
+				</div>
+				<div></div>
+				<form>
+					<FormAlignComponent>
+						<TextField
+							type="text"
+							name="email"
+							id="standard-basic"
+							label="Standard"
+							value={this.state.email}
+							onChange={this.onChangeHandler}
+							style={{ width: "200px" }}
+						/>
+						<TextField
+							id="standard-basic"
+							label="Standard"
+							type="password"
+							name="password"
+							value={this.state.password}
+							onChange={this.onChangeHandler}
+							onKeyPress={this.handleKeyPress}
+						/>
+						<Button
+							variant="contained"
+							color="primary"
+							onClick={this.submitHandler}
+						>
+							Submit
+						</Button>
+					</FormAlignComponent>
+				</form>
+			</div>
 		);
 	};
 }
+const mapStateToProps = (state) => {
+	return {
+		error: state.error,
+		loading: state.loading,
+		data: state.data,
+	};
+};
 
 const mapDispatchToProps = (dispatch) => {
 	return {
 		onAuth: (email, password) => dispatch(actions.auth(email, password)),
+		onAuthInit: () => dispatch(actions.authenticationInit()),
 	};
 };
 
-export default connect(null, mapDispatchToProps)(Signin);
+export default connect(mapStateToProps, mapDispatchToProps)(Signin);
