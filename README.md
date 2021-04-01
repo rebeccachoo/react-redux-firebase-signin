@@ -7,6 +7,7 @@ This single page has functions that handles sign up and the data goes to firebas
 |  Initial Mode | <img src="https://github.com/rebeccachoo/react-redux-firebase-signin/blob/main/initial.png?raw=true"  width="400">|
 |  Error Mode | <img src="https://github.com/rebeccachoo/react-redux-firebase-signin/blob/main/error.png?raw=true"  width="400">|
 |  Success Mode | <img src="https://github.com/rebeccachoo/react-redux-firebase-signin/blob/main/success.png?raw=true"  width="400">|
+|  Firebase Account | <img src="https://github.com/rebeccachoo/react-redux-firebase-signup/blob/main/firebase.png?raw=true"  width="400">|
 
 ## Installation
 
