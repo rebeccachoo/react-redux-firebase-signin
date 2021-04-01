@@ -13,6 +13,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 // npm install --save axios
 // npm install --save redux react-redux
+// npm install @material-ui/core
 const store = createStore(
 	authReducer,
 	composeEnhancers(applyMiddleware(thunk))
