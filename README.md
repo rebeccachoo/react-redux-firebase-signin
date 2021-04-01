@@ -18,6 +18,13 @@ And install material-ui by typing `npm install @material-ui/core`.  <br />
 And install redux and react redux by typing `npm install --save redux react-redux`.  <br />
 And type `npm start` to start the program.
 
+
+## Change the code to your firebase account
+
+In src/store/actions/auth.js, on line #29, you can see the url.
+"https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[YOUR_API]",
+ Simply, you can put your firebase Authentication API.
+ 
  
 ## Contributing
 
