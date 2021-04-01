@@ -4,19 +4,18 @@ This single page has functions that handles sign up and the data goes to firebas
 
 | Feature | Description |
 | -----: | :----------- |
-|  Slow Mode | <img src="https://github.com/rebeccachoo/react-hangman/blob/main/screen1.png?raw=true"  width="400">|
-|  Crazy Mode | <img src="https://github.com/rebeccachoo/react-hangman/blob/main/screen2.png?raw=true"  width="400">|
+|  Initial Mode | <img src="https://github.com/rebeccachoo/react-redux-firebase-signin/blob/main/initial.png?raw=true"  width="400">|
+|  Error Mode | <img src="https://github.com/rebeccachoo/react-redux-firebase-signin/blob/main/error.png?raw=true"  width="400">|
 
 ## Installation
 
 You can simply download the files on your computer. <br />
 In terminal, install by typing `npm install`.  <br />
-And install confetti by typing `npm install --save react-confetti`.  <br />
+And install Axios by typing `npm install --save axios`.  <br />
+And install material-ui by typing `npm install @material-ui/core`.  <br />
+And install redux and react redux by typing `npm install --save redux react-redux`.  <br />
 And type `npm start` to start the program.
 
-## Change Answers
-
-You can insert/delete answers in the file. On #21 in 'src/containers/Game.js', you can find an array of answers. You add more or remove the answers you don't want. I put only animal answers but feel free to put any words you'd like.
  
 ## Contributing
 
