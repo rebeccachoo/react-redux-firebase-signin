@@ -22,7 +22,7 @@ And type `npm start` to start the program.
 ## Change the code to your firebase account
 
 In src/store/actions/auth.js, on line #29, you can see the url.
-"https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[YOUR_API]",
+`https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[YOUR_API]`
  Simply, you can put your firebase Authentication API.
  
  
