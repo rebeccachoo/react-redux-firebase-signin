@@ -1,6 +1,6 @@
 # React - Sign up
 
-This single page has functions that handles sign up and the data goes to firebase Authentication database.
+This single page has functions that handles sign up and the data goes to firebase Authentication database. It uses Meterial UI for inputs and a button.<br /><br />
 
 | Feature | Description |
 | -----: | :----------- |
