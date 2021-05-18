@@ -38,7 +38,7 @@ class Signin extends Component {
 			sucMsg =
 				"Sign up is successful. Sign in status will expire in " +
 				parseInt(this.props.data) / 3600 +
-				" minute.";
+				" hour.";
 			// this.props.onAuthInit();
 		}
 		return (
